@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amjad Healthcare | Revenue Cycle Management</title>
+<style>
+
+/* =========================
+   AMJAD HEALTHCARE DESIGN
+========================= */
+
+html{
+scroll-behavior:smooth;
+}
+
+*{
+box-sizing:border-box;
+}
+
+
+body{
+
+margin:0;
+font-family:
+"Inter",
+"Segoe UI",
+Arial,
+sans-serif;
+
+background:#f8fafc;
+
+color:#102a43;
+
+}
+
+header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:25px 8%;
+
+background:white;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+box-shadow:
+0 5px 20px rgba(0,0,0,.05);
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:800;
+
+letter-spacing:1px;
+
+}
+
+.logo span{
+
+color:#c9a227;
+
+}
+
+nav a{
+
+margin:0 15px;
+
+text-decoration:none;
+
+color:#102a43;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+button{
+
+background:#102a43;
+
+color:white;
+
+border:none;
+
+padding:14px 28px;
+
+border-radius:30px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#c9a227;
+
+transform:translateY(-3px);
+
+}
+
+.btn-link{
+
+display:inline-block;
+
+background:#102a43;
+
+color:white;
+
+text-decoration:none;
+
+padding:14px 28px;
+
+border-radius:30px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.btn-link:hover{
+
+background:#c9a227;
+
+transform:translateY(-3px);
+
+}
+
+.btn-outline{
+
+display:inline-block;
+
+background:transparent;
+
+color:#102a43;
+
+text-decoration:none;
+
+padding:12px 26px;
+
+border-radius:30px;
+
+font-weight:bold;
+
+transition:.3s;
+
+border:2px solid #102a43;
+
+}
+
+.btn-outline:hover{
+
+background:#102a43;
+
+color:white;
+
+transform:translateY(-3px);
+
+}
+
+/* HERO */
+
+.hero{
+
+min-height:85vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:80px 8%;
+
+background:
+
+linear-gradient(
+135deg,
+#ffffff,
+#eef4f8
+);
+
+}
+
+.hero h1{
+
+font-size:55px;
+
+line-height:1.15;
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+font-size:19px;
+
+line-height:1.8;
+
+color:#52606d;
+
+max-width:600px;
+
+}
+
+.hero-box{
+
+background:#102a43;
+
+color:white;
+
+padding:45px;
+
+border-radius:25px;
+
+width:350px;
+
+box-shadow:
+0 25px 50px rgba(0,0,0,.15);
+
+}
+
+.hero-box h2{
+
+color:#c9a227;
+
+}
+
+/* SECTIONS */
+
+section{
+
+padding:80px 8%;
+
+text-align:center;
+
+}
+
+section h2{
+
+font-size:40px;
+
+margin-bottom:15px;
+
+}
+
+.section-subtitle{
+
+color:#52606d;
+
+font-size:17px;
+
+max-width:650px;
+
+margin:0 auto 50px;
+
+line-height:1.7;
+
+}
+
+/* CARDS */
+
+.cards,
+.features,
+.pricing,
+.steps{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+.card,
+.features div,
+.price-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.card:hover,
+.price-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card h3,
+.price-card h3{
+
+color:#102a43;
+
+font-size:24px;
+
+}
+
+.price-card ul{
+
+text-align:left;
+
+line-height:2;
+
+}
+
+.premium{
+
+border:
+
+2px solid #c9a227;
+
+}
+
+/* AI TOOLS SECTION */
+
+.ai-tools{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+max-width:1000px;
+
+margin:0 auto;
+
+}
+
+.ai-card{
+
+background:white;
+
+padding:45px 35px;
+
+border-radius:25px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+text-align:center;
+
+transition:.3s;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.ai-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.ai-badge{
+
+display:inline-block;
+
+font-size:12px;
+
+font-weight:800;
+
+letter-spacing:1px;
+
+padding:6px 16px;
+
+border-radius:20px;
+
+margin-bottom:18px;
+
+}
+
+.ai-badge.free{
+
+background:#e6f4ea;
+
+color:#1e7e34;
+
+}
+
+.ai-badge.pro{
+
+background:#fdf3d9;
+
+color:#8a6d1d;
+
+}
+
+.ai-card h3{
+
+font-size:26px;
+
+margin-bottom:10px;
+
+}
+
+.ai-card p{
+
+color:#52606d;
+
+line-height:1.8;
+
+margin-bottom:25px;
+
+}
+
+/* CODE REVIEW SECTION */
+
+.code-review-box{
+
+max-width:560px;
+
+margin:0 auto;
+
+background:#102a43;
+
+color:white;
+
+padding:50px 45px;
+
+border-radius:25px;
+
+box-shadow:0 25px 50px rgba(0,0,0,.15);
+
+}
+
+.code-review-box h3{
+
+color:#c9a227;
+
+font-size:26px;
+
+margin-bottom:12px;
+
+}
+
+.code-review-box p{
+
+color:#cfd8e3;
+
+line-height:1.8;
+
+margin-bottom:30px;
+
+}
+
+.code-review-actions{
+
+display:flex;
+
+gap:16px;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+.code-review-actions .btn-link{
+
+background:#c9a227;
+
+}
+
+.code-review-actions .btn-link:hover{
+
+background:white;
+
+color:#102a43;
+
+}
+
+.code-review-actions .btn-outline{
+
+border-color:white;
+
+color:white;
+
+}
+
+.code-review-actions .btn-outline:hover{
+
+background:white;
+
+color:#102a43;
+
+}
+
+/* CONTACT */
+
+#contact{
+
+background:#102a43;
+
+color:white;
+
+}
+
+#contact h2{
+
+color:white;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#061626;
+
+color:#c9d3de;
+
+padding:60px 8% 0;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:1.4fr 1fr 1fr;
+
+gap:40px;
+
+padding-bottom:40px;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+text-align:left;
+
+}
+
+.footer-brand h3{
+
+color:white;
+
+font-size:22px;
+
+letter-spacing:1px;
+
+margin-bottom:14px;
+
+}
+
+.footer-brand h3 span{
+
+color:#c9a227;
+
+}
+
+.footer-brand p{
+
+line-height:1.8;
+
+color:#9aa7b5;
+
+max-width:320px;
+
+}
+
+.footer-col h4{
+
+color:white;
+
+font-size:15px;
+
+letter-spacing:.5px;
+
+margin-bottom:18px;
+
+text-transform:uppercase;
+
+}
+
+.footer-col a{
+
+display:block;
+
+color:#9aa7b5;
+
+text-decoration:none;
+
+margin-bottom:12px;
+
+transition:.2s;
+
+}
+
+.footer-col a:hover{
+
+color:#c9a227;
+
+}
+
+.footer-bottom{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+flex-wrap:wrap;
+
+gap:12px;
+
+padding:24px 0;
+
+font-size:14px;
+
+color:#7c8896;
+
+text-align:left;
+
+}
+
+/* FLOATING ACTIONS */
+
+.float-actions{
+
+position:fixed;
+
+bottom:24px;
+
+right:24px;
+
+z-index:1500;
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+align-items:flex-end;
+
+}
+
+.float-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+text-decoration:none;
+
+font-weight:700;
+
+font-size:14px;
+
+padding:13px 22px;
+
+border-radius:999px;
+
+color:white;
+
+box-shadow:0 10px 26px rgba(0,0,0,.25);
+
+transition:.25s;
+
+border:none;
+
+cursor:pointer;
+
+}
+
+.float-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+.float-btn.whatsapp{
+
+background:#1f6e4a;
+
+}
+
+.float-btn.whatsapp:hover{
+
+background:#175a3c;
+
+}
+
+.float-btn.bot{
+
+background:#102a43;
+
+border:1px solid #c9a227;
+
+color:#f0dca6;
+
+}
+
+.float-btn.bot:hover{
+
+background:#0a1a2c;
+
+}
+
+/* CLIENT PORTAL MODAL removed — replaced by external Partner Portal link */
+
+.modal-overlay{
+
+display:none;
+
+position:fixed;
+
+inset:0;
+
+background:rgba(6,22,38,.78);
+
+align-items:center;
+
+justify-content:center;
+
+z-index:2000;
+
+padding:20px;
+
+}
+
+.modal-overlay.active{
+
+display:flex;
+
+}
+
+.modal-box{
+
+background:white;
+
+border-radius:25px;
+
+max-width:620px;
+
+width:100%;
+
+max-height:90vh;
+
+overflow-y:auto;
+
+padding:45px;
+
+position:relative;
+
+box-shadow:0 25px 60px rgba(0,0,0,.3);
+
+text-align:center;
+
+}
+
+.modal-box.wide{
+
+max-width:900px;
+
+padding:20px;
+
+}
+
+.modal-close{
+
+position:absolute;
+
+top:18px;
+
+right:22px;
+
+background:none;
+
+border:none;
+
+font-size:28px;
+
+line-height:1;
+
+color:#102a43;
+
+cursor:pointer;
+
+padding:0;
+
+z-index:10;
+
+}
+
+.modal-close:hover{
+
+background:none;
+
+color:#c9a227;
+
+transform:none;
+
+}
+
+/* botpress iframe wrapper */
+
+.botpress-frame-wrap{
+
+width:100%;
+
+height:70vh;
+
+border-radius:18px;
+
+overflow:hidden;
+
+}
+
+.botpress-frame-wrap iframe{
+
+width:100%;
+
+height:100%;
+
+border:none;
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+
+header{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+
+nav{
+
+display:none;
+
+}
+
+
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+gap:40px;
+
+}
+
+
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+
+.hero-box{
+
+width:100%;
+
+}
+
+
+.botpress-frame-wrap{
+
+height:60vh;
+
+}
+
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.float-actions{
+
+right:16px;
+
+bottom:16px;
+
+}
+
+
+.float-btn{
+
+font-size:13px;
+
+padding:11px 18px;
+
+}
+
+}
+
+</style>
+</head>
+<body>
+<!-- HEADER -->
+<header>
+<div class="logo">
+AMJAD <span>HEALTHCARE</span>
+</div>
+<nav>
+<a href="#services">Services</a>
+<a href="#ai-tools">AI Tools</a>
+<a href="#solutions">Solutions</a>
+<a href="#pricing">Pricing</a>
+<a href="#code-review">Code Review</a>
+<a href="https://amjad-healthcare-daher.web.app/portal-signin.html" target="_blank" rel="noopener">Partner Portal</a>
+<a href="#contact">Contact</a>
+</nav>
+<a class="btn-link" href="https://wa.me/971585436940?text=Hello%20Amjad%20Healthcare%2C%20I%27d%20like%20to%20get%20started." target="_blank" rel="noopener">
+Get Started
+</a>
+</header>
+<!-- HERO SECTION -->
+<section class="hero">
+<div>
+<h1>
+Healthcare Revenue Cycle
+Management Solutions
+</h1>
+<p>
+Professional Medical Coding, Claims Management,
+Auditing and Healthcare Revenue Cycle solutions
+for clinics, providers and healthcare organizations.
+</p>
+<a class="btn-link" href="https://wa.me/971585436940?text=Hello%20Amjad%20Healthcare%2C%20I%27d%20like%20to%20request%20a%20consultation." target="_blank" rel="noopener">
+Request Consultation
+</a>
+</div>
+<div class="hero-box">
+<h2>
+AMJAD HEALTHCARE
+</h2>
+<p>
+✓ ICD-10-CM Coding
+<br>
+✓ CPT & HCPCS Coding
+<br>
+✓ Claims Optimization
+<br>
+✓ Denial Management
+<br>
+✓ Revenue Cycle Support
+</p>
+</div>
+</section>
+<!-- SERVICES -->
+<section id="services">
+<h2>
+Our Healthcare Services
+</h2>
+<div class="cards">
+<div class="card">
+<h3>
+Medical Coding
+</h3>
+<p>
+Accurate ICD-10-CM, CPT and HCPCS coding
+performed with healthcare documentation standards.
+</p>
+</div>
+<div class="card">
+<h3>
+Claims Management
+</h3>
+<p>
+Claim review, validation and workflow support
+to improve reimbursement accuracy.
+</p>
+</div>
+<div class="card">
+<h3>
+Coding Audit
+</h3>
+<p>
+Identify coding errors, compliance risks
+and improve documentation quality.
+</p>
+</div>
+<div class="card">
+<h3>
+Denial Management
+</h3>
+<p>
+Analyze denied claims and provide solutions
+to reduce revenue leakage.
+</p>
+</div>
+<div class="card">
+<h3>
+RCM Consulting
+</h3>
+<p>
+Healthcare revenue cycle optimization
+for sustainable growth.
+</p>
+</div>
+<div class="card">
+<h3>
+Insurance Support
+</h3>
+<p>
+Eligibility checks, claim follow-up
+and payer communication support.
+</p>
+</div>
+</div>
+</section>
+<!-- AI TOOLS -->
+<section id="ai-tools">
+<h2>
+Explore Our AI Tools
+</h2>
+<p class="section-subtitle">
+Get instant answers or dive into advanced AI-powered tools built
+specifically for healthcare revenue cycle and medical coding.
+</p>
+<div class="ai-tools">
+<div class="ai-card">
+<span class="ai-badge free">FREE • NO LOGIN NEEDED</span>
+<h3>Amjad Bot</h3>
+<p>
+Have a quick question about medical coding, claims, or our services?
+Ask Amjad Bot anytime, free of charge.
+</p>
+<a class="btn-link" href="#" onclick="openBotpress(); return false;">
+Try Amjad Bot
+</a>
+</div>
+<div class="ai-card">
+<span class="ai-badge pro">SUBSCRIBER TOOL</span>
+<h3>AMJAD AI</h3>
+<p>
+Our advanced AI-powered platform for active clients — deeper coding
+support, claim insights and reporting tools.
+</p>
+<a class="btn-link" href="https://amjad-healthcare-ai.vercel.app" target="_blank" rel="noopener">
+Open AMJAD AI
+</a>
+</div>
+</div>
+</section>
+<!-- SOLUTIONS -->
+<section id="solutions">
+<h2>
+Why Amjad Healthcare?
+</h2>
+<div class="features">
+<div>
+<h3>
+Healthcare Expertise
+</h3>
+<p>
+Combining medical knowledge with coding
+and claims workflow expertise.
+</p>
+</div>
+<div>
+<h3>
+Flexible Business Models
+</h3>
+<p>
+Pay per claim, hourly support,
+or revenue partnership.
+</p>
+</div>
+<div>
+<h3>
+Technology Driven
+</h3>
+<p>
+Digital workflow, dashboards
+and client reporting solutions.
+</p>
+</div>
+</div>
+</section>
+<!-- HOW IT WORKS -->
+<section>
+<h2>
+How It Works
+</h2>
+<div class="steps">
+<div>
+<h3>
+01
+</h3>
+<p>
+Receive medical records and claim data
+</p>
+</div>
+<div>
+<h3>
+02
+</h3>
+<p>
+Coding review and quality verification
+</p>
+</div>
+<div>
+<h3>
+03
+</h3>
+<p>
+Claim-ready output and reporting
+</p>
+</div>
+</div>
+</section>
+<!-- PRICING SECTION -->
+<section id="pricing">
+<h2>
+Service Models
+</h2>
+<div class="pricing">
+<div class="price-card">
+<h3>
+Pay Per Code
+</h3>
+<p>
+Flexible coding support based on
+the number of charts or claims processed.
+</p>
+<ul>
+<li>ICD-10-CM Coding</li>
+<li>CPT Coding</li>
+<li>HCPCS Coding</li>
+<li>Chart Review</li>
+</ul>
+<a class="btn-link" href="https://wa.me/971585436940?text=Hello%20Amjad%20Healthcare%2C%20I%27m%20interested%20in%20a%20quote%20for%20the%20Pay%20Per%20Code%20plan." target="_blank" rel="noopener">
+Request Quote
+</a>
+</div>
+<div class="price-card">
+<h3>
+Professional Support
+</h3>
+<p>
+Dedicated coding and claims assistance
+based on hourly or daily requirements.
+</p>
+<ul>
+<li>Medical Coding Support</li>
+<li>Claim Review</li>
+<li>Audit Assistance</li>
+<li>Reporting</li>
+</ul>
+<a class="btn-link" href="https://wa.me/971585436940?text=Hello%20Amjad%20Healthcare%2C%20I%27m%20interested%20in%20a%20quote%20for%20the%20Professional%20Support%20plan." target="_blank" rel="noopener">
+Request Quote
+</a>
+</div>
+<div class="price-card premium">
+<h3>
+RCM Partnership
+</h3>
+<p>
+Long-term revenue cycle collaboration
+with performance-based solutions.
+</p>
+<ul>
+<li>Claims Management</li>
+<li>Denial Follow-up</li>
+<li>Revenue Optimization</li>
+<li>Monthly Reports</li>
+</ul>
+<a class="btn-link" href="https://wa.me/971585436940?text=Hello%20Amjad%20Healthcare%2C%20I%27m%20interested%20in%20a%20quote%20for%20the%20RCM%20Partnership%20plan." target="_blank" rel="noopener">
+Request Quote
+</a>
+</div>
+</div>
+</section>
+<!-- CODE REVIEW (links out to the coding subscription product's sign in / sign up) -->
+<section id="code-review">
+<h2>
+Code Review
+</h2>
+<p class="section-subtitle">
+Look up ICD-10-CM, CPT, HCPCS and ICD-10-PCS codes instantly and track your
+team's monthly accuracy. Sign in if you already have an account, or create
+a new one to start your subscription.
+</p>
+<div class="code-review-box">
+<h3>Code Review Portal</h3>
+<p>
+Sign in to continue, or create a new account to activate your monthly
+subscription and get full access to the code lookup tool and dashboard.
+</p>
+<div class="code-review-actions">
+<a class="btn-link" href="https://amjad-healthcare-daher.web.app/signup.html" target="_blank" rel="noopener">
+Create Account
+</a>
+<a class="btn-outline" href="https://amjad-healthcare-daher.web.app/signin.html" target="_blank" rel="noopener">
+Sign In
+</a>
+</div>
+</div>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+<h2>
+Contact Amjad Healthcare
+</h2>
+<p>
+Dubai, United Arab Emirates
+</p>
+<p>
+Email:
+amjaddaher531@gmail.com
+</p>
+<p>
+WhatsApp:
+<a href="https://wa.me/971585436940" target="_blank" rel="noopener" style="color:#c9a227;">+971 58 543 6940</a>
+</p>
+<a class="btn-link" href="https://wa.me/971585436940?text=Hello%20Amjad%20Healthcare%2C%20I%27m%20interested%20in%20starting%20a%20partnership." target="_blank" rel="noopener">
+Start Partnership
+</a>
+</section>
+<footer>
+<div class="footer-grid">
+<div class="footer-brand">
+<h3>AMJAD <span>HEALTHCARE</span></h3>
+<p>
+Medical coding, claims management and revenue cycle solutions
+for clinics and healthcare providers across Dubai and the UAE.
+</p>
+</div>
+<div class="footer-col">
+<h4>Navigate</h4>
+<a href="#services">Services</a>
+<a href="#ai-tools">AI Tools</a>
+<a href="#pricing">Pricing</a>
+<a href="#code-review">Code Review</a>
+</div>
+<div class="footer-col">
+<h4>Connect</h4>
+<a href="https://amjad-healthcare-daher.web.app/portal-signin.html" target="_blank" rel="noopener">Partner Portal</a>
+<a href="https://wa.me/971585436940" target="_blank" rel="noopener">WhatsApp</a>
+<a href="mailto:amjaddaher531@gmail.com">Email Us</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Amjad Healthcare. All Rights Reserved.</span>
+<span>Dubai, United Arab Emirates</span>
+</div>
+</footer>
+
+<!-- BOTPRESS "Amjad Bot" MODAL (free, public) -->
+<div class="modal-overlay" id="botpressModal">
+<div class="modal-box wide">
+<button class="modal-close" onclick="closeBotpress()">&times;</button>
+<div class="botpress-frame-wrap">
+<iframe id="botpressIframe" src="" title="Amjad Bot Chat"></iframe>
+</div>
+</div>
+</div>
+
+<!-- FLOATING ACTIONS -->
+<div class="float-actions">
+<a class="float-btn whatsapp" href="https://wa.me/971585436940" target="_blank" rel="noopener">💬 WhatsApp</a>
+<button class="float-btn bot" onclick="openBotpress()">✦ AMJAD BOT</button>
+</div>
+
+<script>
+
+/* ================================
+   BOTPRESS "AMJAD BOT" MODAL (public, free)
+================================ */
+
+const BOTPRESS_URL = "https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/25/23/20250125230347-DC8S01WC.json";
+
+function openBotpress(){
+document.getElementById('botpressIframe').src = BOTPRESS_URL;
+document.getElementById('botpressModal').classList.add('active');
+}
+
+function closeBotpress(){
+document.getElementById('botpressModal').classList.remove('active');
+document.getElementById('botpressIframe').src = "";
+}
+
+document.getElementById('botpressModal').addEventListener('click', function(e){
+if(e.target === this){
+closeBotpress();
+}
+});
+
+</script>
+</body>
+</html>
