@@ -1,1334 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amjad Healthcare | Revenue Cycle Management</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amjad Healthcare | Healthcare Revenue Cycle Management Solutions</title>
+<meta name="description" content="Professional Medical Coding, Claims Management, Auditing and Healthcare Revenue Cycle solutions for clinics, providers and healthcare organizations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
-
-/* =========================
-   AMJAD HEALTHCARE DESIGN
-========================= */
-
-html{
-scroll-behavior:smooth;
-}
-
-*{
-box-sizing:border-box;
-}
-
-
-body{
-
-margin:0;
-font-family:
-"Inter",
-"Segoe UI",
-Arial,
-sans-serif;
-
-background:#f8fafc;
-
-color:#102a43;
-
-}
-
-header{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:25px 8%;
-
-background:white;
-
-position:sticky;
-
-top:0;
-
-z-index:1000;
-
-box-shadow:
-0 5px 20px rgba(0,0,0,.05);
-
-}
-
-.logo{
-
-font-size:28px;
-
-font-weight:800;
-
-letter-spacing:1px;
-
-}
-
-.logo span{
-
-color:#c9a227;
-
-}
-
-nav a{
-
-margin:0 15px;
-
-text-decoration:none;
-
-color:#102a43;
-
-font-weight:600;
-
-cursor:pointer;
-
-}
-
-button{
-
-background:#102a43;
-
-color:white;
-
-border:none;
-
-padding:14px 28px;
-
-border-radius:30px;
-
-cursor:pointer;
-
-font-weight:bold;
-
-transition:.3s;
-
-}
-
-button:hover{
-
-background:#c9a227;
-
-transform:translateY(-3px);
-
-}
-
-.btn-link{
-
-display:inline-block;
-
-background:#102a43;
-
-color:white;
-
-text-decoration:none;
-
-padding:14px 28px;
-
-border-radius:30px;
-
-font-weight:bold;
-
-transition:.3s;
-
-}
-
-.btn-link:hover{
-
-background:#c9a227;
-
-transform:translateY(-3px);
-
-}
-
-.btn-outline{
-
-display:inline-block;
-
-background:transparent;
-
-color:#102a43;
-
-text-decoration:none;
-
-padding:12px 26px;
-
-border-radius:30px;
-
-font-weight:bold;
-
-transition:.3s;
-
-border:2px solid #102a43;
-
-}
-
-.btn-outline:hover{
-
-background:#102a43;
-
-color:white;
-
-transform:translateY(-3px);
-
-}
-
-/* HERO */
-
-.hero{
-
-min-height:85vh;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-padding:80px 8%;
-
-background:
-
-linear-gradient(
-135deg,
-#ffffff,
-#eef4f8
-);
-
-}
-
-.hero h1{
-
-font-size:55px;
-
-line-height:1.15;
-
-margin-bottom:25px;
-
-}
-
-.hero p{
-
-font-size:19px;
-
-line-height:1.8;
-
-color:#52606d;
-
-max-width:600px;
-
-}
-
-.hero-box{
-
-background:#102a43;
-
-color:white;
-
-padding:45px;
-
-border-radius:25px;
-
-width:350px;
-
-box-shadow:
-0 25px 50px rgba(0,0,0,.15);
-
-}
-
-.hero-box h2{
-
-color:#c9a227;
-
-}
-
-/* SECTIONS */
-
-section{
-
-padding:80px 8%;
-
-text-align:center;
-
-}
-
-section h2{
-
-font-size:40px;
-
-margin-bottom:15px;
-
-}
-
-.section-subtitle{
-
-color:#52606d;
-
-font-size:17px;
-
-max-width:650px;
-
-margin:0 auto 50px;
-
-line-height:1.7;
-
-}
-
-/* CARDS */
-
-.cards,
-.features,
-.pricing,
-.steps{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(260px,1fr));
-
-gap:30px;
-
-}
-
-.card,
-.features div,
-.price-card{
-
-background:white;
-
-padding:35px;
-
-border-radius:25px;
-
-box-shadow:
-
-0 15px 35px rgba(0,0,0,.08);
-
-transition:.3s;
-
-}
-
-.card:hover,
-.price-card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.card h3,
-.price-card h3{
-
-color:#102a43;
-
-font-size:24px;
-
-}
-
-.price-card ul{
-
-text-align:left;
-
-line-height:2;
-
-}
-
-.premium{
-
-border:
-
-2px solid #c9a227;
-
-}
-
-/* AI TOOLS SECTION */
-
-.ai-tools{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-gap:30px;
-
-max-width:1000px;
-
-margin:0 auto;
-
-}
-
-.ai-card{
-
-background:white;
-
-padding:45px 35px;
-
-border-radius:25px;
-
-box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-text-align:center;
-
-transition:.3s;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
-.ai-card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.ai-badge{
-
-display:inline-block;
-
-font-size:12px;
-
-font-weight:800;
-
-letter-spacing:1px;
-
-padding:6px 16px;
-
-border-radius:20px;
-
-margin-bottom:18px;
-
-}
-
-.ai-badge.free{
-
-background:#e6f4ea;
-
-color:#1e7e34;
-
-}
-
-.ai-badge.pro{
-
-background:#fdf3d9;
-
-color:#8a6d1d;
-
-}
-
-.ai-card h3{
-
-font-size:26px;
-
-margin-bottom:10px;
-
-}
-
-.ai-card p{
-
-color:#52606d;
-
-line-height:1.8;
-
-margin-bottom:25px;
-
-}
-
-/* CODE REVIEW SECTION */
-
-.code-review-box{
-
-max-width:560px;
-
-margin:0 auto;
-
-background:#102a43;
-
-color:white;
-
-padding:50px 45px;
-
-border-radius:25px;
-
-box-shadow:0 25px 50px rgba(0,0,0,.15);
-
-}
-
-.code-review-box h3{
-
-color:#c9a227;
-
-font-size:26px;
-
-margin-bottom:12px;
-
-}
-
-.code-review-box p{
-
-color:#cfd8e3;
-
-line-height:1.8;
-
-margin-bottom:30px;
-
-}
-
-.code-review-actions{
-
-display:flex;
-
-gap:16px;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-}
-
-.code-review-actions .btn-link{
-
-background:#c9a227;
-
-}
-
-.code-review-actions .btn-link:hover{
-
-background:white;
-
-color:#102a43;
-
-}
-
-.code-review-actions .btn-outline{
-
-border-color:white;
-
-color:white;
-
-}
-
-.code-review-actions .btn-outline:hover{
-
-background:white;
-
-color:#102a43;
-
-}
-
-/* CONTACT */
-
-#contact{
-
-background:#102a43;
-
-color:white;
-
-}
-
-#contact h2{
-
-color:white;
-
-}
-
-/* FOOTER */
-
-footer{
-
-background:#061626;
-
-color:#c9d3de;
-
-padding:60px 8% 0;
-
-}
-
-.footer-grid{
-
-display:grid;
-
-grid-template-columns:1.4fr 1fr 1fr;
-
-gap:40px;
-
-padding-bottom:40px;
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
-text-align:left;
-
-}
-
-.footer-brand h3{
-
-color:white;
-
-font-size:22px;
-
-letter-spacing:1px;
-
-margin-bottom:14px;
-
-}
-
-.footer-brand h3 span{
-
-color:#c9a227;
-
-}
-
-.footer-brand p{
-
-line-height:1.8;
-
-color:#9aa7b5;
-
-max-width:320px;
-
-}
-
-.footer-col h4{
-
-color:white;
-
-font-size:15px;
-
-letter-spacing:.5px;
-
-margin-bottom:18px;
-
-text-transform:uppercase;
-
-}
-
-.footer-col a{
-
-display:block;
-
-color:#9aa7b5;
-
-text-decoration:none;
-
-margin-bottom:12px;
-
-transition:.2s;
-
-}
-
-.footer-col a:hover{
-
-color:#c9a227;
-
-}
-
-.footer-bottom{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-flex-wrap:wrap;
-
-gap:12px;
-
-padding:24px 0;
-
-font-size:14px;
-
-color:#7c8896;
-
-text-align:left;
-
-}
-
-/* FLOATING ACTIONS */
-
-.float-actions{
-
-position:fixed;
-
-bottom:24px;
-
-right:24px;
-
-z-index:1500;
-
-display:flex;
-
-flex-direction:column;
-
-gap:12px;
-
-align-items:flex-end;
-
-}
-
-.float-btn{
-
-display:inline-flex;
-
-align-items:center;
-
-gap:8px;
-
-text-decoration:none;
-
-font-weight:700;
-
-font-size:14px;
-
-padding:13px 22px;
-
-border-radius:999px;
-
-color:white;
-
-box-shadow:0 10px 26px rgba(0,0,0,.25);
-
-transition:.25s;
-
-border:none;
-
-cursor:pointer;
-
-}
-
-.float-btn:hover{
-
-transform:translateY(-3px);
-
-}
-
-.float-btn.whatsapp{
-
-background:#1f6e4a;
-
-}
-
-.float-btn.whatsapp:hover{
-
-background:#175a3c;
-
-}
-
-.float-btn.bot{
-
-background:#102a43;
-
-border:1px solid #c9a227;
-
-color:#f0dca6;
-
-}
-
-.float-btn.bot:hover{
-
-background:#0a1a2c;
-
-}
-
-/* CLIENT PORTAL MODAL removed — replaced by external Partner Portal link */
-
-.modal-overlay{
-
-display:none;
-
-position:fixed;
-
-inset:0;
-
-background:rgba(6,22,38,.78);
-
-align-items:center;
-
-justify-content:center;
-
-z-index:2000;
-
-padding:20px;
-
-}
-
-.modal-overlay.active{
-
-display:flex;
-
-}
-
-.modal-box{
-
-background:white;
-
-border-radius:25px;
-
-max-width:620px;
-
-width:100%;
-
-max-height:90vh;
-
-overflow-y:auto;
-
-padding:45px;
-
-position:relative;
-
-box-shadow:0 25px 60px rgba(0,0,0,.3);
-
-text-align:center;
-
-}
-
-.modal-box.wide{
-
-max-width:900px;
-
-padding:20px;
-
-}
-
-.modal-close{
-
-position:absolute;
-
-top:18px;
-
-right:22px;
-
-background:none;
-
-border:none;
-
-font-size:28px;
-
-line-height:1;
-
-color:#102a43;
-
-cursor:pointer;
-
-padding:0;
-
-z-index:10;
-
-}
-
-.modal-close:hover{
-
-background:none;
-
-color:#c9a227;
-
-transform:none;
-
-}
-
-/* botpress iframe wrapper */
-
-.botpress-frame-wrap{
-
-width:100%;
-
-height:70vh;
-
-border-radius:18px;
-
-overflow:hidden;
-
-}
-
-.botpress-frame-wrap iframe{
-
-width:100%;
-
-height:100%;
-
-border:none;
-
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-
-header{
-
-flex-direction:column;
-
-gap:20px;
-
-}
-
-
-nav{
-
-display:none;
-
-}
-
-
-
-.hero{
-
-flex-direction:column;
-
-text-align:center;
-
-gap:40px;
-
-}
-
-
-
-.hero h1{
-
-font-size:38px;
-
-}
-
-
-.hero-box{
-
-width:100%;
-
-}
-
-
-.botpress-frame-wrap{
-
-height:60vh;
-
-}
-
-
-.footer-grid{
-
-grid-template-columns:1fr;
-
-}
-
-
-.float-actions{
-
-right:16px;
-
-bottom:16px;
-
-}
-
-
-.float-btn{
-
-font-size:13px;
-
-padding:11px 18px;
-
-}
-
-}
-
+:root{--bg:#050505;--bg2:#0b0a08;--gold:#c9a45c;--gold2:#e6d3a3;--cream:#f1e9d6;--mut:#a39a86;--line:rgba(201,164,92,.3)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;color:var(--mut);background:var(--bg);line-height:1.6}
+h1,h2,h3{color:var(--cream);font-weight:400;line-height:1.08}h1 i,h2 i{color:var(--gold2);font-weight:400}
+a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(5,5,5,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.brand{display:flex;flex-direction:column;align-items:center;gap:2px}.brand img{height:28px}
+.brand span{font-size:9px;letter-spacing:.6em;color:var(--gold);padding-left:.6em}
+nav{display:flex;gap:28px}nav a{color:var(--cream);font-size:18px;letter-spacing:.04em;transition:.3s}nav a:hover{color:var(--gold)}
+.btn{display:inline-block;padding:14px 32px;border-radius:40px;font-size:18px;letter-spacing:.05em;border:1px solid var(--gold);color:var(--gold2);transition:.3s}
+.btn:hover{background:rgba(201,164,92,.14)}.btn.f{background:var(--gold);color:#17120a;font-weight:600}.btn.f:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn.s{padding:10px 24px;font-size:16px}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:130px 0 90px;overflow:hidden;background:radial-gradient(700px 500px at 78% 45%,rgba(201,164,92,.13),transparent 65%),var(--bg)}
+.bg{position:absolute;inset:0;width:100%;height:100%;opacity:.55}.bg .g{stroke:rgba(201,164,92,.1);stroke-width:1}
+.bg .ln{fill:none;stroke:var(--gold);stroke-width:1.5;stroke-dasharray:3000;stroke-dashoffset:3000;animation:dr 5s ease forwards .3s}.bg .cd{fill:rgba(201,164,92,.16)}
+@keyframes dr{to{stroke-dashoffset:0}}
+.grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.eyebrow{font-size:14px;letter-spacing:.45em;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:14px}.eyebrow:before{content:"";width:36px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(44px,6.6vw,86px);margin-bottom:24px}
+.lead{max-width:520px;font-size:21px;color:var(--mut);margin-bottom:36px}.cta{display:flex;gap:14px;flex-wrap:wrap}
+.orb{position:relative;display:flex;align-items:center;justify-content:center;min-height:470px}
+.orb svg{position:absolute;inset:-8% -6%;width:112%;height:116%;animation:sp 60s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}
+.orb svg ellipse{fill:none;stroke:var(--gold);stroke-width:1}
+.card{position:relative;width:min(100%,360px);background:linear-gradient(160deg,rgba(201,164,92,.1),rgba(0,0,0,.6));border:1px solid var(--line);border-radius:24px;padding:36px 32px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.card img{width:82%;display:block;margin:0 auto 6px}.card .t{text-align:center;font-size:12px;letter-spacing:.75em;color:var(--gold);padding-left:.75em;margin-bottom:22px}
+.card li{list-style:none;padding:12px 0;border-top:1px solid rgba(201,164,92,.2);color:var(--cream);font-size:19px;display:flex;gap:12px}.card li:before{content:"\2713";color:var(--gold)}
+section{padding:110px 0;border-top:1px solid var(--line)}.alt{background:var(--bg2)}
+.hd{max-width:640px;margin-bottom:56px}.hd h2{font-size:clamp(34px,4.6vw,54px);margin-bottom:14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.c{display:block;background:linear-gradient(160deg,rgba(201,164,92,.07),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:20px;padding:34px 28px;transition:.4s}
+.c:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 22px 50px rgba(201,164,92,.1)}
+.c .n{color:var(--gold);font-size:34px;font-style:italic;margin-bottom:8px}.c h3{font-size:26px;margin-bottom:8px}.c p{font-size:18px}
+.c ul{list-style:none;margin:14px 0 24px}.c li{padding:8px 0;border-bottom:1px solid rgba(201,164,92,.18);font-size:18px}.c li:before{content:"\2713  ";color:var(--gold)}
+.price{font-size:50px;color:var(--gold2);font-style:italic}.price small{font-size:18px;color:var(--mut);font-style:normal}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.split h2{font-size:clamp(34px,4.6vw,54px);margin-bottom:16px}.split p{margin-bottom:28px}
+footer{padding:48px 0;text-align:center;font-size:16px;border-top:1px solid var(--line)}footer img{height:28px;margin-bottom:12px}
+.fl{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;flex-direction:column;gap:10px;padding:10px;border:1px solid var(--line);border-radius:30px;background:rgba(5,5,5,.85);backdrop-filter:blur(8px)}
+.fl a{padding:11px 20px;border-radius:24px;font-size:16px;letter-spacing:.08em;text-align:center;color:var(--gold2);border:1px solid var(--gold);transition:.3s}.fl a:hover{background:var(--gold);color:#17120a}
+.rv{opacity:0;transform:translateY(26px);transition:1s}.rv.in{opacity:1;transform:none}
+@media(max-width:960px){nav{display:none}.grid,.split{grid-template-columns:1fr}.orb{min-height:420px}.hero{min-height:auto}section{padding:76px 0}}
+
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(520px circle at var(--x,72%) var(--y,40%),rgba(201,164,92,.13),transparent 62%);pointer-events:none}
+.ecg{position:absolute;left:0;bottom:6%;width:100%;height:46%}.ecg path{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.ecg .b{stroke:rgba(201,164,92,.28);stroke-width:1.4}.ecg .p{stroke:#46e3b5;stroke-width:2.2;stroke-dasharray:70 930;filter:drop-shadow(0 0 6px #2fe0b0);animation:pu 5.5s linear infinite}
+@keyframes pu{from{stroke-dashoffset:70}to{stroke-dashoffset:-930}}
+h1 i,h2 i{background:linear-gradient(100deg,#c9a45c 20%,#fff1c9 45%,#c9a45c 70%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 7s linear infinite}
+@keyframes sh{to{background-position:-220% 0}}
+.hero h1 span{display:block;opacity:0;transform:translateY(40px);animation:up 1s cubic-bezier(.2,.7,.2,1) forwards}.hero h1 span:nth-child(2){animation-delay:.15s}.hero h1 span:nth-child(3){animation-delay:.3s}
+@keyframes up{to{opacity:1;transform:none}}@keyframes fi{from{opacity:0;transform:translateY(14px)}}
+.cyc{position:relative;width:100%;max-width:640px;margin:0 auto}.cyc svg{width:100%;height:auto;display:block;overflow:visible}
+.cyc .rg{fill:none;stroke:rgba(201,164,92,.45);stroke-width:1.2}.cyc .rg2{fill:none;stroke:rgba(70,227,181,.4);stroke-width:1;stroke-dasharray:3 9;transform-origin:400px 270px;animation:sp 50s linear infinite}
+.cyc .nd{fill:#050505;stroke:var(--gold);stroke-width:1.5}.cyc .nc{fill:var(--gold);transform-box:fill-box;transform-origin:center;animation:pl 2.6s ease-in-out infinite}
+@keyframes pl{50%{transform:scale(1.8);opacity:.5}}.cyc text{font-family:'Cormorant Garamond',serif;font-size:22px;fill:var(--cream)}
+.cyc .mid{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:27%;text-align:center}.cyc .mid img{width:100%;display:block}.cyc .mid div{font-size:11px;letter-spacing:.7em;color:var(--gold);padding-left:.7em;margin-top:4px}
+.mq{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:18px 0;background:var(--bg2)}.mq>div{display:flex;width:max-content;animation:mq 38s linear infinite}
+.mq span{font-size:23px;font-style:italic;color:var(--gold2);padding:0 28px;white-space:nowrap}.mq span:after{content:"\2726";color:var(--gold);margin-left:56px;font-style:normal}@keyframes mq{to{transform:translateX(-50%)}}
+.st{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;padding:76px 28px}.st b{display:block;font-size:68px;font-weight:400;color:var(--gold2);font-style:italic;line-height:1}.st span{font-size:15px;letter-spacing:.3em;text-transform:uppercase}
+.ibs{display:flex;gap:18px;flex-wrap:wrap}.ib{position:relative;display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;border:1px solid var(--gold);color:var(--gold2);background:rgba(5,5,5,.6);transition:.35s}
+.ib svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.ib:hover,.ib.g{background:var(--gold);color:#17120a}.ib:hover{transform:translateY(-4px)}
+.ib em{position:absolute;bottom:calc(100% + 12px);left:50%;transform:translate(-50%,6px);padding:6px 14px;border:1px solid var(--line);border-radius:20px;background:#0b0a08;color:var(--cream);font-size:15px;font-style:normal;white-space:nowrap;opacity:0;pointer-events:none;transition:.3s}.ib:hover em{opacity:1;transform:translate(-50%,0)}
+.ib.big{width:78px;height:78px}.ib.big svg{width:29px;height:29px}
+.fb{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;flex-direction:column;gap:12px;padding:10px;border:1px solid var(--line);border-radius:40px;background:rgba(5,5,5,.8);backdrop-filter:blur(8px)}
+.fb .ib em{bottom:auto;top:50%;left:auto;right:calc(100% + 18px);transform:translate(8px,-50%)}.fb .ib:hover em{transform:translate(0,-50%)}.fb .ib:hover{transform:none}
+.sm{display:grid;grid-template-columns:260px 1fr;gap:28px}.tabs{display:flex;flex-direction:column;gap:10px}
+.tab{font:inherit;font-size:22px;text-align:left;padding:18px 22px;border:1px solid var(--line);border-radius:16px;background:transparent;color:var(--mut);cursor:pointer;transition:.3s;display:flex;gap:14px;align-items:baseline}
+.tab b{font-weight:400;font-style:italic;color:var(--gold);font-size:18px}.tab:hover{border-color:var(--gold);color:var(--cream)}.tab.on{background:linear-gradient(120deg,rgba(201,164,92,.18),transparent);border-color:var(--gold);color:var(--cream)}
+.panel{display:none;grid-template-columns:1fr 1fr;gap:40px;border:1px solid var(--line);border-radius:24px;padding:44px;background:linear-gradient(160deg,rgba(201,164,92,.08),rgba(0,0,0,.4));animation:fi .6s both}.panel.on{display:grid}
+.panel h3{font-size:34px;margin-bottom:8px}.panel .tg{color:var(--gold);letter-spacing:.3em;font-size:13px;text-transform:uppercase;margin-bottom:10px}.panel .price{margin:16px 0 0}
+.panel ul{list-style:none;margin-bottom:28px}.panel li{padding:9px 0;border-bottom:1px solid rgba(201,164,92,.18)}.panel li:before{content:"\2713  ";color:var(--gold)}
+footer{position:relative;overflow:hidden;padding:84px 0 34px;text-align:left;font-size:19px}.wm{position:absolute;left:50%;bottom:-4%;width:88%;height:auto;margin:0;transform:translateX(-50%);opacity:.05;pointer-events:none}
+.ft{position:relative;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid var(--line)}.ft img{height:50px;margin:0}.ft p{font-size:32px;font-style:italic;color:var(--cream)}
+.fc{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;padding:52px 0}.fc h4{font-weight:400;font-size:27px;color:var(--gold2);margin-bottom:14px}.fc a,.fc p{display:block;padding:5px 0;color:var(--mut);transition:.3s}.fc a:hover{color:var(--gold2)}.fc .ibs a{display:inline-flex;padding:0}
+.fbm{position:relative;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-top:26px;border-top:1px solid var(--line);font-size:16px}
+@media(max-width:900px){.sm{grid-template-columns:1fr}.tabs{flex-direction:row;overflow-x:auto}.panel{grid-template-columns:1fr;padding:28px}.fc{grid-template-columns:1fr}.st{grid-template-columns:repeat(2,1fr)}.cyc text{font-size:27px}}
 </style>
 </head>
 <body>
-<!-- HEADER -->
-<header>
-<div class="logo">
-AMJAD <span>HEALTHCARE</span>
-</div>
-<nav>
-<a href="#services">Services</a>
-<a href="#ai-tools">AI Tools</a>
-<a href="#solutions">Solutions</a>
-<a href="#pricing">Pricing</a>
-<a href="#code-review">Code Review</a>
-<a href="https://amjad-healthcare-daher.web.app/portal-signin.html" target="_blank" rel="noopener">Partner Portal</a>
-<a href="#contact">Contact</a>
-</nav>
-<a class="btn-link" href="https://wa.me/971585436940?text=Hello%20Amjad%20Healthcare%2C%20I%27d%20like%20to%20get%20started." target="_blank" rel="noopener">
-Get Started
-</a>
-</header>
-<!-- HERO SECTION -->
-<section class="hero">
-<div>
-<h1>
-Healthcare Revenue Cycle
-Management Solutions
-</h1>
-<p>
-Professional Medical Coding, Claims Management,
-Auditing and Healthcare Revenue Cycle solutions
-for clinics, providers and healthcare organizations.
-</p>
-<a class="btn-link" href="https://wa.me/971585436940?text=Hello%20Amjad%20Healthcare%2C%20I%27d%20like%20to%20request%20a%20consultation." target="_blank" rel="noopener">
-Request Consultation
-</a>
-</div>
-<div class="hero-box">
-<h2>
-AMJAD HEALTHCARE
-</h2>
-<p>
-✓ ICD-10-CM Coding
-<br>
-✓ CPT & HCPCS Coding
-<br>
-✓ Claims Optimization
-<br>
-✓ Denial Management
-<br>
-✓ Revenue Cycle Support
-</p>
-</div>
-</section>
-<!-- SERVICES -->
-<section id="services">
-<h2>
-Our Healthcare Services
-</h2>
-<div class="cards">
-<div class="card">
-<h3>
-Medical Coding
-</h3>
-<p>
-Accurate ICD-10-CM, CPT and HCPCS coding
-performed with healthcare documentation standards.
-</p>
-</div>
-<div class="card">
-<h3>
-Claims Management
-</h3>
-<p>
-Claim review, validation and workflow support
-to improve reimbursement accuracy.
-</p>
-</div>
-<div class="card">
-<h3>
-Coding Audit
-</h3>
-<p>
-Identify coding errors, compliance risks
-and improve documentation quality.
-</p>
-</div>
-<div class="card">
-<h3>
-Denial Management
-</h3>
-<p>
-Analyze denied claims and provide solutions
-to reduce revenue leakage.
-</p>
-</div>
-<div class="card">
-<h3>
-RCM Consulting
-</h3>
-<p>
-Healthcare revenue cycle optimization
-for sustainable growth.
-</p>
-</div>
-<div class="card">
-<h3>
-Insurance Support
-</h3>
-<p>
-Eligibility checks, claim follow-up
-and payer communication support.
-</p>
-</div>
-</div>
-</section>
-<!-- AI TOOLS -->
-<section id="ai-tools">
-<h2>
-Explore Our AI Tools
-</h2>
-<p class="section-subtitle">
-Get instant answers or dive into advanced AI-powered tools built
-specifically for healthcare revenue cycle and medical coding.
-</p>
-<div class="ai-tools">
-<div class="ai-card">
-<span class="ai-badge free">FREE • NO LOGIN NEEDED</span>
-<h3>Amjad Bot</h3>
-<p>
-Have a quick question about medical coding, claims, or our services?
-Ask Amjad Bot anytime, free of charge.
-</p>
-<a class="btn-link" href="#" onclick="openBotpress(); return false;">
-Try Amjad Bot
-</a>
-</div>
-<div class="ai-card">
-<span class="ai-badge pro">SUBSCRIBER TOOL</span>
-<h3>AMJAD AI</h3>
-<p>
-Our advanced AI-powered platform for active clients — deeper coding
-support, claim insights and reporting tools.
-</p>
-<a class="btn-link" href="https://amjad-healthcare-ai.vercel.app" target="_blank" rel="noopener">
-Open AMJAD AI
-</a>
-</div>
-</div>
-</section>
-<!-- SOLUTIONS -->
-<section id="solutions">
-<h2>
-Why Amjad Healthcare?
-</h2>
-<div class="features">
-<div>
-<h3>
-Healthcare Expertise
-</h3>
-<p>
-Combining medical knowledge with coding
-and claims workflow expertise.
-</p>
-</div>
-<div>
-<h3>
-Flexible Business Models
-</h3>
-<p>
-Pay per claim, hourly support,
-or revenue partnership.
-</p>
-</div>
-<div>
-<h3>
-Technology Driven
-</h3>
-<p>
-Digital workflow, dashboards
-and client reporting solutions.
-</p>
-</div>
-</div>
-</section>
-<!-- HOW IT WORKS -->
-<section>
-<h2>
-How It Works
-</h2>
-<div class="steps">
-<div>
-<h3>
-01
-</h3>
-<p>
-Receive medical records and claim data
-</p>
-</div>
-<div>
-<h3>
-02
-</h3>
-<p>
-Coding review and quality verification
-</p>
-</div>
-<div>
-<h3>
-03
-</h3>
-<p>
-Claim-ready output and reporting
-</p>
-</div>
-</div>
-</section>
-<!-- PRICING SECTION -->
-<section id="pricing">
-<h2>
-Service Models
-</h2>
-<div class="pricing">
-<div class="price-card">
-<h3>
-Pay Per Code
-</h3>
-<p>
-Flexible coding support based on
-the number of charts or claims processed.
-</p>
-<ul>
-<li>ICD-10-CM Coding</li>
-<li>CPT Coding</li>
-<li>HCPCS Coding</li>
-<li>Chart Review</li>
-</ul>
-<a class="btn-link" href="https://wa.me/971585436940?text=Hello%20Amjad%20Healthcare%2C%20I%27m%20interested%20in%20a%20quote%20for%20the%20Pay%20Per%20Code%20plan." target="_blank" rel="noopener">
-Request Quote
-</a>
-</div>
-<div class="price-card">
-<h3>
-Professional Support
-</h3>
-<p>
-Dedicated coding and claims assistance
-based on hourly or daily requirements.
-</p>
-<ul>
-<li>Medical Coding Support</li>
-<li>Claim Review</li>
-<li>Audit Assistance</li>
-<li>Reporting</li>
-</ul>
-<a class="btn-link" href="https://wa.me/971585436940?text=Hello%20Amjad%20Healthcare%2C%20I%27m%20interested%20in%20a%20quote%20for%20the%20Professional%20Support%20plan." target="_blank" rel="noopener">
-Request Quote
-</a>
-</div>
-<div class="price-card premium">
-<h3>
-RCM Partnership
-</h3>
-<p>
-Long-term revenue cycle collaboration
-with performance-based solutions.
-</p>
-<ul>
-<li>Claims Management</li>
-<li>Denial Follow-up</li>
-<li>Revenue Optimization</li>
-<li>Monthly Reports</li>
-</ul>
-<a class="btn-link" href="https://wa.me/971585436940?text=Hello%20Amjad%20Healthcare%2C%20I%27m%20interested%20in%20a%20quote%20for%20the%20RCM%20Partnership%20plan." target="_blank" rel="noopener">
-Request Quote
-</a>
-</div>
-</div>
-</section>
-<!-- CODE REVIEW (links out to the coding subscription product's sign in / sign up) -->
-<section id="code-review">
-<h2>
-Code Review
-</h2>
-<p class="section-subtitle">
-Look up ICD-10-CM, CPT, HCPCS and ICD-10-PCS codes instantly and track your
-team's monthly accuracy. Sign in if you already have an account, or create
-a new one to start your subscription.
-</p>
-<div class="code-review-box">
-<h3>Code Review Portal</h3>
-<p>
-Sign in to continue, or create a new account to activate your monthly
-subscription and get full access to the code lookup tool and dashboard.
-</p>
-<div class="code-review-actions">
-<a class="btn-link" href="https://amjad-healthcare-daher.web.app/signup.html" target="_blank" rel="noopener">
-Create Account
-</a>
-<a class="btn-outline" href="https://amjad-healthcare-daher.web.app/signin.html" target="_blank" rel="noopener">
-Sign In
-</a>
-</div>
-</div>
-</section>
-<!-- CONTACT -->
-<section id="contact">
-<h2>
-Contact Amjad Healthcare
-</h2>
-<p>
-Dubai, United Arab Emirates
-</p>
-<p>
-Email:
-amjaddaher531@gmail.com
-</p>
-<p>
-WhatsApp:
-<a href="https://wa.me/971585436940" target="_blank" rel="noopener" style="color:#c9a227;">+971 58 543 6940</a>
-</p>
-<a class="btn-link" href="https://wa.me/971585436940?text=Hello%20Amjad%20Healthcare%2C%20I%27m%20interested%20in%20starting%20a%20partnership." target="_blank" rel="noopener">
-Start Partnership
-</a>
-</section>
-<footer>
-<div class="footer-grid">
-<div class="footer-brand">
-<h3>AMJAD <span>HEALTHCARE</span></h3>
-<p>
-Medical coding, claims management and revenue cycle solutions
-for clinics and healthcare providers across Dubai and the UAE.
-</p>
-</div>
-<div class="footer-col">
-<h4>Navigate</h4>
-<a href="#services">Services</a>
-<a href="#ai-tools">AI Tools</a>
-<a href="#pricing">Pricing</a>
-<a href="#code-review">Code Review</a>
-</div>
-<div class="footer-col">
-<h4>Connect</h4>
-<a href="https://amjad-healthcare-daher.web.app/portal-signin.html" target="_blank" rel="noopener">Partner Portal</a>
-<a href="https://wa.me/971585436940" target="_blank" rel="noopener">WhatsApp</a>
-<a href="mailto:amjaddaher531@gmail.com">Email Us</a>
-</div>
-</div>
-<div class="footer-bottom">
-<span>© 2026 Amjad Healthcare. All Rights Reserved.</span>
-<span>Dubai, United Arab Emirates</span>
-</div>
-</footer>
+<header><div class="wrap nav">
+  <a class="brand" href="#top"><img data-logo alt="Amjad"><span>HEALTHCARE</span></a>
+  <nav><a href="#services">Services</a><a href="#ai-tools">AI Tools</a><a href="#solutions">Solutions</a><a href="#pricing">Pricing</a><a href="#code-review">Code Review</a><a href="#partner-portal">Partner Portal</a><a href="#contact">Contact</a></nav>
+  <a class="btn s" href="https://wa.me/971585436940?text=Hello%20Amjad%20Healthcare%2C%20I%20would%20like%20to%20get%20started." target="_blank" rel="noopener">Get Started</a>
+</div></header>
 
-<!-- BOTPRESS "Amjad Bot" MODAL (free, public) -->
-<div class="modal-overlay" id="botpressModal">
-<div class="modal-box wide">
-<button class="modal-close" onclick="closeBotpress()">&times;</button>
-<div class="botpress-frame-wrap">
-<iframe id="botpressIframe" src="" title="Amjad Bot Chat"></iframe>
+<main id="top">
+<div class="hero" id="hero">
+  <svg class="ecg" viewBox="0 0 1200 560" preserveAspectRatio="none"><path class="b" d="M0 460 h90 l16 -14 l16 14 h34 l8 16 l14 -130 l16 170 l10 -56 h50 l18 -22 l22 22 h46 h90 l16 -14 l16 14 h34 l8 16 l14 -130 l16 170 l10 -56 h50 l18 -22 l22 22 h46 h90 l16 -14 l16 14 h34 l8 16 l14 -130 l16 170 l10 -56 h50 l18 -22 l22 22 h46 h180"/><path class="p" pathLength="1000" d="M0 460 h90 l16 -14 l16 14 h34 l8 16 l14 -130 l16 170 l10 -56 h50 l18 -22 l22 22 h46 h90 l16 -14 l16 14 h34 l8 16 l14 -130 l16 170 l10 -56 h50 l18 -22 l22 22 h46 h90 l16 -14 l16 14 h34 l8 16 l14 -130 l16 170 l10 -56 h50 l18 -22 l22 22 h46 h180"/></svg>
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">DUBAI · UAE</div>
+      <h1><span>Healthcare</span><span><i>Revenue Cycle</i></span><span>Management Solutions</span></h1>
+      <p class="lead">Professional Medical Coding, Claims Management, Auditing and Healthcare Revenue Cycle solutions for clinics, providers and healthcare organizations.</p>
+      <div class="cta"><a class="btn f" href="https://wa.me/971585436940?text=Hello%20Amjad%20Healthcare%2C%20I%20would%20like%20to%20request%20a%20consultation." target="_blank" rel="noopener">Request Consultation</a><a class="btn" href="#services">Our Services</a></div>
+    </div>
+    <div class="cyc"><svg viewBox="0 0 800 540"><circle class="rg" cx="400" cy="270" r="180"/><circle class="rg2" cx="400" cy="270" r="125"/>
+      <circle r="5" fill="#c9a45c" style="filter:drop-shadow(0 0 6px #c9a45c)"><animateMotion dur="14s" repeatCount="indefinite" path="M400 90A180 180 0 1 1 399.9 90"/></circle>
+      <circle r="4" fill="#46e3b5" style="filter:drop-shadow(0 0 6px #2fe0b0)"><animateMotion dur="14s" begin="-7s" repeatCount="indefinite" path="M400 90A180 180 0 1 1 399.9 90"/></circle><circle class="nd" cx="400" cy="90" r="10"/><circle class="nc" cx="400" cy="90" r="4" style="animation-delay:0.0s"/><text x="400" y="60" text-anchor="middle">ICD-10-CM Coding</text><circle class="nd" cx="571.2" cy="214.4" r="10"/><circle class="nc" cx="571.2" cy="214.4" r="4" style="animation-delay:0.5s"/><text x="594" y="220" text-anchor="start">CPT &amp; HCPCS Coding</text><circle class="nd" cx="505.8" cy="415.6" r="10"/><circle class="nc" cx="505.8" cy="415.6" r="4" style="animation-delay:1.0s"/><text x="506" y="456" text-anchor="middle">Claims Optimization</text><circle class="nd" cx="294.2" cy="415.6" r="10"/><circle class="nc" cx="294.2" cy="415.6" r="4" style="animation-delay:1.5s"/><text x="294" y="456" text-anchor="middle">Denial Management</text><circle class="nd" cx="228.8" cy="214.4" r="10"/><circle class="nc" cx="228.8" cy="214.4" r="4" style="animation-delay:2.0s"/><text x="206" y="220" text-anchor="end">Revenue Cycle Support</text></svg>
+      <div class="mid"><img data-logo alt="Amjad"><div>HEALTHCARE</div></div></div>
+  </div>
 </div>
-</div>
-</div>
+<div class="mq"><div id="mqd"><span>ICD-10-CM</span><span>CPT</span><span>HCPCS</span><span>Claims Optimization</span><span>Denial Management</span><span>Medical Auditing</span><span>Revenue Cycle</span></div></div>
+<div class="wrap st rv"><div><b data-n="9">0</b><span>AI Agents</span></div><div><b data-n="3">0</b><span>Code Sets</span></div><div><b data-n="4">0</b><span>Specialties</span></div><div><b data-n="1">0</b><span>Secure Portal</span></div></div>
 
-<!-- FLOATING ACTIONS -->
-<div class="float-actions">
-<a class="float-btn whatsapp" href="https://wa.me/971585436940" target="_blank" rel="noopener">💬 WhatsApp</a>
-<button class="float-btn bot" onclick="openBotpress()">✦ AMJAD BOT</button>
-</div>
+<section id="services"><div class="wrap">
+  <div class="hd rv"><div class="eyebrow">SERVICES</div><h2>Our Healthcare <i>Services</i></h2><p>Accurate coding, clean claims and disciplined follow-up, so every service you deliver is paid in full and on time.</p></div>
+  <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr))">
+    <div class="c rv"><div class="n">01</div><h3>ICD-10-CM Coding</h3><p>Diagnosis coding that reflects the documentation and withstands payer review.</p></div>
+    <div class="c rv"><div class="n">02</div><h3>CPT &amp; HCPCS Coding</h3><p>Procedure and supply coding with correct modifiers and medical-necessity support.</p></div>
+    <div class="c rv"><div class="n">03</div><h3>Claims Optimization</h3><p>Scrubbed, complete claims submitted right the first time to protect cash flow.</p></div>
+    <div class="c rv"><div class="n">04</div><h3>Denial Management</h3><p>Root-cause analysis, appeals and prevention to recover revenue and cut repeat denials.</p></div>
+  </div>
+</div></section>
+
+<section id="ai-tools" class="alt"><div class="wrap split">
+  <div class="rv"><div class="eyebrow">AI TOOLS</div><h2>Amjad Healthcare <i>AI</i></h2>
+    <p>An advanced medical coding and audit platform powered by nine specialised AI agents covering coding, billing, RCM, claims review and audit, in one secure workspace.</p>
+    <a class="btn f" href="https://amjad-healthcare-ai.vercel.app/" target="_blank" rel="noopener">Open Amjad Healthcare AI</a></div>
+  <div class="c rv"><h3>9 specialised agents</h3><ul><li>Medical coding</li><li>Billing and RCM workflows</li><li>Claims review</li><li>Audit and compliance checks</li></ul></div>
+</div></section>
+
+<section id="solutions"><div class="wrap">
+  <div class="hd rv"><div class="eyebrow">SOLUTIONS</div><h2>Built for clinics <i>and providers</i></h2><p>Tailored revenue cycle support for specialties where accuracy decides profitability.</p></div>
+  <div class="cards">
+    <div class="c rv"><h3>Aesthetics &amp; Dermatology</h3><p>Cosmetic versus medical coding clarity and clean self-pay and insured workflows.</p></div>
+    <div class="c rv"><h3>Dental</h3><p>Procedure coding and claims handling aligned with payer rules.</p></div>
+    <div class="c rv"><h3>Orthopedic</h3><p>Complex procedure coding, modifiers and high-value claim protection.</p></div>
+    <div class="c rv"><h3>Radiology &amp; Imaging</h3><p>Imaging coding backed by hands-on radiography experience.</p></div>
+  </div>
+</div></section>
+
+<section id="pricing" class="alt"><div class="wrap"><div class="hd rv"><div class="eyebrow">PRICING</div><h2>Service <i>Models</i></h2><p>Choose how you want to work with us. Every model starts with a conversation on WhatsApp.</p></div><div class="sm rv"><div class="tabs"><button class="tab on" data-i="0"><b>01</b>AI Platform</button><button class="tab" data-i="1"><b>02</b>Managed RCM</button><button class="tab" data-i="2"><b>03</b>Code Review Audit</button></div><div><div class="panel on" id="p0"><div><div class="tg">Best for</div><h3>Amjad Healthcare AI</h3><p>Coders, auditors and clinics who want AI-assisted coding and audit on demand.</p><div class="price">AED 199<small> / month</small></div></div><div><ul><li>Access to Amjad Healthcare AI and its 9 agents</li><li>Secure Google sign-in</li><li>Coding, claims review and audit tools</li></ul><a class="btn f" href="https://wa.me/971585436940?text=Hello%2C%20I%20would%20like%20to%20subscribe%20to%20Amjad%20Healthcare%20AI." target="_blank" rel="noopener">Subscribe on WhatsApp</a></div></div><div class="panel" id="p1"><div><div class="tg">Best for</div><h3>Managed RCM Services</h3><p>Boutique clinics that want coding, claims and denials handled for them.</p><div class="price" style="font-size:38px">Tailored to your clinic</div></div><div><ul><li>ICD-10-CM, CPT and HCPCS coding</li><li>Claims submission and optimization</li><li>Denial management and appeals</li></ul><a class="btn f" href="https://wa.me/971585436940?text=Hello%2C%20I%20would%20like%20to%20discuss%20Managed%20RCM%20Services%20for%20my%20clinic." target="_blank" rel="noopener">Discuss my clinic</a></div></div><div class="panel" id="p2"><div><div class="tg">Best for</div><h3>Code Review Audit</h3><p>Clinics and coders who want an expert second review before payers do.</p><div class="price" style="font-size:38px">Scoped per audit</div></div><div><ul><li>Code and modifier validation</li><li>Documentation gap findings</li><li>Denial-risk and compliance report</li></ul><a class="btn f" href="https://wa.me/971585436940?text=Hello%2C%20I%20would%20like%20to%20request%20a%20Code%20Review%20Audit." target="_blank" rel="noopener">Request an audit</a></div></div></div></div></div></section>
+
+<section id="code-review"><div class="wrap split">
+  <div class="rv"><div class="eyebrow">CODE REVIEW</div><h2>A second set of <i>expert eyes</i></h2>
+    <p>Audit-grade review of ICD-10-CM, CPT and HCPCS assignments against documentation, to catch under-coding, over-coding and compliance risks before payers do.</p>
+    <div class="cta"><a class="btn f" href="https://amjad-healthcare-daher.web.app/signup.html">Create Account</a><a class="btn" href="https://amjad-healthcare-daher.web.app/signin.html">Sign in</a></div></div>
+  <div class="c rv"><h3>What we review</h3><ul><li>Diagnosis and procedure codes</li><li>Modifiers and medical necessity</li><li>Documentation gaps</li><li>Denial risk and compliance</li></ul></div>
+</div></section>
+
+<section id="partner-portal" class="alt"><div class="wrap split">
+  <div class="rv"><div class="eyebrow">PARTNER PORTAL</div><h2>Claims &amp; <i>Coding Portal</i></h2>
+    <p>For onboarded clinics and Amjad Healthcare staff only. Access is granted by invitation. Sign in once and land where your role belongs.</p>
+    <a class="btn f" href="https://amjad-healthcare-daher.web.app/portal-signin.html">Partner Portal Sign in</a></div>
+  <div class="c rv"><ul><li><b>Clinic account</b> – submit cases and track their status</li><li><b>Staff account</b> – work the cases assigned to you</li><li><b>Admin account</b> – every clinic, case and team member</li></ul></div>
+</div></section>
+
+<section id="contact"><div class="wrap" style="text-align:center"><div class="hd rv" style="margin:0 auto 46px"><div class="eyebrow" style="justify-content:center">CONTACT</div><h2>Let us protect <i>your revenue</i></h2><p>Tell us about your clinic and we will respond promptly.</p></div><div class="ibs rv" style="justify-content:center"><a class="ib big" href="https://wa.me/971585436940" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M3.5 20.5l1.4-4.3A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.5c-.3 2.6 2.9 6.2 6.2 6.4l1.3-1.3-2.2-1.2-.9.8c-.9-.4-1.7-1.2-2.1-2.1l.8-.9-1.1-2.2z"/></svg><em>WhatsApp</em></a><a class="ib big" href="mailto:amjaddaher68@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><em>Email</em></a><a class="ib big" href="https://www.instagram.com/amjaddaher2" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></svg><em>Instagram</em></a><a class="ib big" href="https://www.linkedin.com/in/amjaddaher2" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13c0-1.6 1-2.6 2.4-2.6S17 11.4 17 13v4"/></svg><em>LinkedIn</em></a></div><div class="rv" style="margin-top:46px"><a class="btn f" href="https://wa.me/971585436940" target="_blank" rel="noopener">Talk on WhatsApp</a></div></div></section>
+</main>
+
+<footer><img class="wm" data-logo alt=""><div class="wrap">
+<div class="ft"><img data-logo alt="Amjad Healthcare"><p>Every claim, accounted for.</p></div>
+<div class="fc"><div><h4>Explore</h4><a href="#services">Services</a><a href="#ai-tools">AI Tools</a><a href="#solutions">Solutions</a><a href="#pricing">Service Models</a><a href="#code-review">Code Review</a><a href="#partner-portal">Partner Portal</a></div><div><h4>Contact</h4><a href="tel:+971585436940">+971 58 543 6940</a><a href="mailto:amjaddaher68@gmail.com">amjaddaher68@gmail.com</a><p>Dubai, United Arab Emirates</p></div><div><h4>Follow</h4><div class="ibs"><a class="ib " href="https://wa.me/971585436940" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M3.5 20.5l1.4-4.3A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.5c-.3 2.6 2.9 6.2 6.2 6.4l1.3-1.3-2.2-1.2-.9.8c-.9-.4-1.7-1.2-2.1-2.1l.8-.9-1.1-2.2z"/></svg><em>WhatsApp</em></a><a class="ib " href="mailto:amjaddaher68@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><em>Email</em></a><a class="ib " href="https://www.instagram.com/amjaddaher2" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></svg><em>Instagram</em></a><a class="ib " href="https://www.linkedin.com/in/amjaddaher2" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13c0-1.6 1-2.6 2.4-2.6S17 11.4 17 13v4"/></svg><em>LinkedIn</em></a></div></div></div>
+<div class="fbm"><span>© 2026 Amjad Healthcare</span><span>All rights reserved</span><a class="btn s" href="#top">Back to top</a></div></div></footer>
+
+<div class="fb"><a id="bot" class="ib g" href="#contact" aria-label="Amjad Bot"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 16v4M17 18h4"/></svg><em>Amjad Bot</em></a><a class="ib " href="https://wa.me/971585436940" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M3.5 20.5l1.4-4.3A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.5c-.3 2.6 2.9 6.2 6.2 6.4l1.3-1.3-2.2-1.2-.9.8c-.9-.4-1.7-1.2-2.1-2.1l.8-.9-1.1-2.2z"/></svg><em>WhatsApp</em></a></div>
 
 <script>
-
-/* ================================
-   BOTPRESS "AMJAD BOT" MODAL (public, free)
-================================ */
-
-const BOTPRESS_URL = "https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/25/23/20250125230347-DC8S01WC.json";
-
-function openBotpress(){
-document.getElementById('botpressIframe').src = BOTPRESS_URL;
-document.getElementById('botpressModal').classList.add('active');
-}
-
-function closeBotpress(){
-document.getElementById('botpressModal').classList.remove('active');
-document.getElementById('botpressIframe').src = "";
-}
-
-document.getElementById('botpressModal').addEventListener('click', function(e){
-if(e.target === this){
-closeBotpress();
-}
-});
-
+const LOGO="data:image/png;base64,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";
+const BOT_URL="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/25/23/20250125230347-DC8S01WC.json";
+document.querySelectorAll('[data-logo]').forEach(i=>i.src=LOGO);
+const b=document.getElementById('bot');if(BOT_URL){b.href=BOT_URL;b.target="_blank";b.rel="noopener";}
+const mq=document.getElementById('mqd');mq.innerHTML+=mq.innerHTML;
+const hero=document.getElementById('hero');hero.addEventListener('mousemove',e=>{const r=hero.getBoundingClientRect();hero.style.setProperty('--x',e.clientX-r.left+'px');hero.style.setProperty('--y',e.clientY-r.top+'px');});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(!x.isIntersecting)return;x.target.classList.add('in');x.target.querySelectorAll('[data-n]').forEach(c=>{const n=+c.dataset.n,t0=performance.now();(function f(t){const p=Math.min((t-t0)/1400,1);c.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(t0)});io.unobserve(x.target)}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab,.panel').forEach(e=>e.classList.remove('on'));t.classList.add('on');document.getElementById('p'+t.dataset.i).classList.add('on')});
 </script>
 </body>
 </html>
